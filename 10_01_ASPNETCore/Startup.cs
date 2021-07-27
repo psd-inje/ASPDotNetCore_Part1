@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _06_01_VersionRazorPage
+namespace _10_01_ASPNETCore
 {
     public class Startup
     {
@@ -28,6 +28,9 @@ namespace _06_01_VersionRazorPage
             }
 
             app.UseStaticFiles();
+            //app.UseFileServer();
+
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
