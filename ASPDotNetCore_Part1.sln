@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_01_VersionRazorPage", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_01_UseStaticFiles", "07_01_UseStaticFiles\07_01_UseStaticFiles.csproj", "{2ED23451-0AED-4CDC-9200-9216BC2E4D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_01_ASPNETCore", "10_01_ASPNETCore\10_01_ASPNETCore.csproj", "{B72E1630-5E43-44F5-9116-9B19EB935F02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_01_ASPNETCore", "10_01_ASPNETCore\10_01_ASPNETCore.csproj", "{B72E1630-5E43-44F5-9116-9B19EB935F02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16_02_공통레이아웃적용하기", "16_02_공통레이아웃적용하기\16_02_공통레이아웃적용하기.csproj", "{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B72E1630-5E43-44F5-9116-9B19EB935F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72E1630-5E43-44F5-9116-9B19EB935F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72E1630-5E43-44F5-9116-9B19EB935F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
