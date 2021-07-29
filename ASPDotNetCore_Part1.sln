@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_01_ASPNETCore", "10_01_A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16_02_공통레이아웃적용하기", "16_02_공통레이아웃적용하기\16_02_공통레이아웃적용하기.csproj", "{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_02_Portfolio데이터모델링", "17_02_Portfolio데이터모델링\17_02_Portfolio데이터모델링.csproj", "{850DE3DC-869E-46F6-8448-DCC74F52F032}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B217F8EF-5BB8-42DA-BD81-F0C431C78FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{850DE3DC-869E-46F6-8448-DCC74F52F032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{850DE3DC-869E-46F6-8448-DCC74F52F032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{850DE3DC-869E-46F6-8448-DCC74F52F032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{850DE3DC-869E-46F6-8448-DCC74F52F032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
