@@ -1,38 +1,85 @@
 [
   {
-    "id": 1,
-    "title": "Project One",
-    "description": "One -Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!",
-    "img": "/Portfolios/Images/ASP-NET-Banners-01.png"
+    "Id": 1,
+    "Title": "Project One",
+    "Description": "One -Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!",
+    "img": "/Portfolios/Images/ASP-NET-Banners-01.png",
+    "Ratings": [
+      1,
+      3
+    ]
   },
   {
-    "id": 2,
-    "title": "Project Two",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
-    "img": "/Portfolios/Images/ASP-NET-Banners-02.png"
+    "Id": 2,
+    "Title": "Project Two",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
+    "img": "/Portfolios/Images/ASP-NET-Banners-02.png",
+    "Ratings": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
   },
   {
-    "id": 3,
-    "title": "Project Three",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!",
-    "img": "/Portfolios/Images/Banner-01-Azure.png"
+    "Id": 3,
+    "Title": "Project Three",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!",
+    "img": "/Portfolios/Images/Banner-01-Azure.png",
+    "Ratings": null
   },
   {
-    "id": 4,
-    "title": "Project Four",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
-    "img": "/Portfolios/Images/Banner-02-VS.png"
+    "Id": 4,
+    "Title": "Project Four",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
+    "img": "/Portfolios/Images/Banner-02-VS.png",
+    "Ratings": [
+      3,
+      5,
+      5,
+      5,
+      5
+    ]
   },
   {
-    "id": 5,
-    "title": "Project Five",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
-    "img": "/Portfolios/Images/Banner-01-Azure.png"
+    "Id": 5,
+    "Title": "Project Five",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.",
+    "img": "/Portfolios/Images/Banner-01-Azure.png",
+    "Ratings": [
+      3
+    ]
   },
   {
-    "id": 6,
-    "title": "Project Six",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.",
-    "img": "/Portfolios/Images/Banner-01-Azure.png"
+    "Id": 6,
+    "Title": "Project Six",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.",
+    "img": "/Portfolios/Images/Banner-01-Azure.png",
+    "Ratings": [
+      3,
+      4,
+      5,
+      4,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      3,
+      3,
+      3
+    ]
   }
 ]

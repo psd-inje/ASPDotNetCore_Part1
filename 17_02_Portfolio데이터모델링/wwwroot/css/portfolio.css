@@ -6,3 +6,20 @@
     background-size: cover;
     opacity:.8;
 }
+
+.portfolio-list .card:hover
+{
+    transform: scale(1.05); /* 1.05 배 키움*/
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06); /* 그림자 효과 */
+}
+
+
+.modal .portfolio-item-image {
+    height: 250px;
+    vertical-align: bottom;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+}
+
