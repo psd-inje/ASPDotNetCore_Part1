@@ -1,9 +1,10 @@
 ﻿@page
-@model _17_02_Portfolio데이터모델링.Pages.Portfolios.IndexModel
-
+@model _17_02_Portfolio데이터모델링.Pages.Portfolios.ListModel
+@inject PortfolioServiceJsonFile PortfolioService
 
 @{
     ViewData["Title"] = "Portfolio";
+    var portfolios = PortfolioService.GetPortfolios();
 }
 
 <!-- Page Content -->
@@ -24,7 +25,7 @@
 
     <div class="row">
 
-        @foreach (var portfolio in Model.portfolios)
+        @foreach (var portfolio in portfolios)
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">

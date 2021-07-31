@@ -9,7 +9,7 @@ namespace _17_02_Portfolio데이터모델링.Models
 
         public string Title { get; set; }
         public string Description { get; set; }
-        
+
         [JsonPropertyName("img")]
         public string Image { get; set; }
 

@@ -18,4 +18,25 @@
     <Folder Include="wwwroot\Portfolios\Images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Pages\Portfolios\Index - 복사 - 복사 - 복사.cshtml.cs">
+      <DependentUpon>Index - 복사 - 복사.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Portfolios\Index - 복사 - 복사%282%29.cshtml.cs">
+      <DependentUpon>Index - 복사.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Portfolios\Index - 복사 - 복사.cshtml.cs">
+      <DependentUpon>Index - 복사.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Portfolios\Index - 복사%282%29 - 복사.cshtml.cs">
+      <DependentUpon>Index - 복사(2).cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Portfolios\Index - 복사%282%29.cshtml.cs">
+      <DependentUpon>Index.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Portfolios\Index - 복사.cshtml.cs">
+      <DependentUpon>Index.cshtml.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
