@@ -5,6 +5,8 @@
 
 @{
     ViewData["Title"] = "Portfolio";
+
+    Layout = "_LayoutPortfolio";
 }
 
 <!-- Page Content -->
@@ -23,6 +25,7 @@
         <li class="breadcrumb-item active">Portfolio</li>
     </ol>
 
+    <!-- /.row 
     <h2>Razor Page 사용 출력</h2>
     <div class="row">
         @foreach (var portfolio in Model.portfolios)
@@ -46,12 +49,12 @@
     </div>
 
     <hr />
-
+    /.row -->
 
     <component type="typeof(PortfoliosList)" render-mode="ServerPrerendered" />
 
-    <script src="_framework/blazor.server.js"></script>
+    @*<script src="_framework/blazor.server.js"></script>*@
 
 
 </div>
-<!-- /.container -->
+    <!-- /.container -->

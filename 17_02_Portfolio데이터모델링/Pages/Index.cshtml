@@ -4,6 +4,10 @@
 
 @model IndexModel
 @{
+
+    //Layout = "_Layout";
+    Layout = "_LayoutPortfolio";
+
     ViewData["Title"] = "My Blog";
     //ViewData["Title"] = "My Blog";
 
@@ -109,12 +113,14 @@
             </div>
         </div>
     </div>
-    
-    
-    <!-- /.row -->
-    <!-- Portfolio Section -->
-    <h2>Portfolio Heading</h2>
 
+
+    <!-- Portfolio Section -->
+    <h2>Portfolio @*Heading*@</h2>
+
+    <component type="typeof(PortfoliosList)" render-mode="ServerPrerendered" />
+
+    <!-- /.row 
     <div class="row">
 
         @foreach (var portfolio in portfolios)
@@ -135,11 +141,11 @@
                 </div>
             </div>
         }
-
     </div>
-    <!-- /.row -->
-    
-    
+     /.row -->
+
+
+
     <!-- Features Section -->
     <div class="row">
         <div class="col-lg-6">
