@@ -1,4 +1,5 @@
 using _17_02_Portfolio데이터모델링.Data;
+using _17_02_Portfolio데이터모델링.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,8 @@ namespace _17_02_Portfolio데이터모델링
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+
+            services.AddTransient<PortfolioServiceJsonFile>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

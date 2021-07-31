@@ -1,5 +1,6 @@
 ﻿@page
 
+@inject PortfolioServiceJsonFile PortfolioService
 
 @model IndexModel
 @{
@@ -19,7 +20,9 @@
     //    new Portfolio { Id = 1, Title ="Project Six", Description= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse."},
     //};
 
-    var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
+    //var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
+
+    var portfolios = PortfolioService.GetPortfolios();
 
 }
 

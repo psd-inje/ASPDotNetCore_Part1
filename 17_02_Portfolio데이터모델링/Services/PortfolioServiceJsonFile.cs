@@ -1,4 +1,5 @@
 ﻿using _17_02_Portfolio데이터모델링.Models;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,11 +11,27 @@ namespace _17_02_Portfolio데이터모델링.Services
 {
     public class PortfolioServiceJsonFile
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public PortfolioServiceJsonFile(IWebHostEnvironment webHostEnvironment)
+        {
+            this._webHostEnvironment = webHostEnvironment;
+        }
+
+        private string JsonFileName 
+        {
+            get
+            {
+                //return this._webHostEnvironment.WebRootPath + "\\Portfolios" + "\\portfolios.json";
+                return Path.Combine(this._webHostEnvironment.WebRootPath, "Portfolios", "portfolios.json");
+            }
+        }
+
 
         public IEnumerable<Portfolio> GetPortfolios()
         {
-            var jsonFileName = @"C:\Users\psdin\source\repos\ASPDotNetCore_Part1\17_02_Portfolio데이터모델링\wwwroot\Portfolios\portfolios.json";
-            using (var jsonFileReader = File.OpenText(jsonFileName))
+            //var jsonFileName = @"C:\Users\psdin\source\repos\ASPDotNetCore_Part1\17_02_Portfolio데이터모델링\wwwroot\Portfolios\portfolios.json";
+            using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
                 return JsonSerializer.Deserialize<Portfolio[]>(jsonFileReader.ReadToEnd(), options);
