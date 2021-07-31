@@ -20,9 +20,48 @@
                     <p class="card-text">@portfolio.Description</p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary">Read More...</button>
+                    <button class="btn btn-primary"
+                            data-toggle="modal"
+                            data-target="#portfolioModal"
+                            @onclick="(() => SelectPortfolio(portfolio.Id) )">
+                        Read More...
+                    </button>
                 </div>
             </div>
         </div>
     }
 </div>
+
+@if (selectPortfolio != null)
+{
+    <!-- Modal -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLavel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="portfolioModalLavel">@selectPortfolio.Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @selectPortfolio.Description
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+
+@code{
+    Portfolio selectPortfolio = new Portfolio();
+    void SelectPortfolio(int portfolioId)
+    {
+        selectPortfolio = PortfolioService.GetPortfolios().First(p => p.Id == portfolioId);
+        //selectPortfolio = PortfolioService.GetPortfolios().Where(p => p.Id == portfolioId);
+    }
+}
