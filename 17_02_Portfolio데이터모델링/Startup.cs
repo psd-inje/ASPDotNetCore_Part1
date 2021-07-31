@@ -34,6 +34,8 @@ namespace _17_02_Portfolio데이터모델링
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddServerSideBlazor();
             services.AddRazorPages();
 
             services.AddTransient<PortfolioServiceJsonFile>();
@@ -64,6 +66,7 @@ namespace _17_02_Portfolio데이터모델링
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapBlazorHub();
                 endpoints.MapRazorPages();
             });
         }

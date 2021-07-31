@@ -2,6 +2,7 @@
 @model _17_02_Portfolio데이터모델링.Pages.Portfolios.IndexModel
 
 
+
 @{
     ViewData["Title"] = "Portfolio";
 }
@@ -22,8 +23,8 @@
         <li class="breadcrumb-item active">Portfolio</li>
     </ol>
 
+    <h2>Razor Page 사용 출력</h2>
     <div class="row">
-
         @foreach (var portfolio in Model.portfolios)
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -42,8 +43,14 @@
                 </div>
             </div>
         }
-
     </div>
+
+    <hr />
+
+
+    <component type="typeof(PortfoliosList)" render-mode="ServerPrerendered" />
+
+    <script src="_framework/blazor.server.js"></script>
 
 
 </div>
