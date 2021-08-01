@@ -35,6 +35,7 @@ namespace AuthenticationAuthorization
 
             app.UseEndpoints(endpoints =>
             {
+                #region /
                 endpoints.MapGet("/", async context =>
                 {
                     string content = "<h1>ASP.NET Core 인증과 권한 초간단 코드</h1>";
@@ -42,17 +43,20 @@ namespace AuthenticationAuthorization
                     content += "<a href=\"/Login\">로그인</a><br />";
                     content += "<a href=\"/Info\">정보</a><br />";
                     content += "<a href=\"/InfoJson\">정보(Json)</a><br />";
+                    content += "<a href=\"/Logout\">로그아웃</a><br />";
 
                     context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
                     await context.Response.WriteAsync(content);
-                });
+                }); 
+                #endregion
 
+                #region Login
                 endpoints.MapGet("/Login", async context =>
                 {
                     var claims = new List<Claim>
                     {
-                        //new Claim(ClaimTypes.Name, "User Name")
-                        new Claim(ClaimTypes.Name, "아이디")
+                //new Claim(ClaimTypes.Name, "User Name")
+                new Claim(ClaimTypes.Name, "아이디")
                     };
 
                     var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
@@ -65,7 +69,8 @@ namespace AuthenticationAuthorization
                     context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
                     await context.Response.WriteAsync(content);
 
-                });
+                }); 
+                #endregion
 
                 #region Info
                 endpoints.MapGet("/Info", async context =>
@@ -105,8 +110,21 @@ namespace AuthenticationAuthorization
                         json += "{}";
                     }
 
-                    context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
+                    //context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
+                    context.Response.Headers["Content-Type"] = "application/json; charset=utf-8"; //MIME 타입
                     await context.Response.WriteAsync(json);
+                });
+                #endregion
+
+                #region Logout
+                endpoints.MapGet("/Logout", async context =>
+                {
+                    await context.SignOutAsync("Cookies");
+
+
+                    //context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
+                    context.Response.Headers["Content-Type"] = "application/json; charset=utf-8"; //MIME 타입
+                    await context.Response.WriteAsync("<h3>로그아웃 완료</h3>");
                 });
                 #endregion
 
