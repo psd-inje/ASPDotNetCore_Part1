@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroRolesType", "ZeroRolesT
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ZeroRolesType.SqlServer", "ZeroRolesType.SqlServer\ZeroRolesType.SqlServer.sqlproj", "{FB9E6FF1-C799-4A96-B31E-0EF1EBDD74D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationAuthorization", "AuthenticationAuthorization\AuthenticationAuthorization.csproj", "{F79BF955-755B-4596-AC9B-5891F865763C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{FB9E6FF1-C799-4A96-B31E-0EF1EBDD74D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB9E6FF1-C799-4A96-B31E-0EF1EBDD74D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB9E6FF1-C799-4A96-B31E-0EF1EBDD74D0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F79BF955-755B-4596-AC9B-5891F865763C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79BF955-755B-4596-AC9B-5891F865763C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79BF955-755B-4596-AC9B-5891F865763C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79BF955-755B-4596-AC9B-5891F865763C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
