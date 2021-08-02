@@ -11,6 +11,8 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AuthenticationAuthorization
 {
@@ -20,7 +22,11 @@ namespace AuthenticationAuthorization
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication("Cookies").AddCookie();
+            services.AddControllers();   //  < services.AddControllersWithViews(); < services.AddMvc();
+
+
+            //services.AddAuthentication("Cookies").AddCookie();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,9 +39,12 @@ namespace AuthenticationAuthorization
 
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapDefaultControllerRoute();
+
                 endpoints.MapGet("/", async context =>
                 {
                     string content = "<h1>ASP.NET Core 인증과 권한 초간단 코드</h1>";
@@ -48,7 +57,17 @@ namespace AuthenticationAuthorization
                     content += "<a href=\"/InfoDetails\">정보(Details)</a><br />";
                     content += "<a href=\"/InfoJson\">정보(Json)</a><br />";
                     content += "<a href=\"/Logout\">로그아웃</a><br />";
+                    content += "<hr />";
+                    content += "<a href=\"/Landing/Index\">랜딩페이지</a><br />";
+                    content += "<a href=\"/Landing/Greeting\">환영페이지</a><br />";
+                    content += "<a href=\"/Greeting\">환영페이지(Route)</a><br />";
+                    content += "<hr />";
+                    content += "<a href=\"/Dashboard\">관리페이지</a><br />";
+                    content += "<a href=\"/api/AuthService\">로그인 정보(Json)</a><br />";
                     #endregion
+
+
+                    
 
                     context.Response.Headers["Content-Type"] = "text/html; charset=utf-8";
                     await context.Response.WriteAsync(content);
@@ -209,9 +228,51 @@ namespace AuthenticationAuthorization
     }
 
 
+    #region DTO
     public class ClaimDto
     {
         public string Type { get; set; }
         public string Value { get; set; }
     }
+    #endregion
+
+    #region MVC Controller
+    [AllowAnonymous]
+    #region LandingController
+    public class LandingController : Controller
+    {
+        public IActionResult Index() => Content("누구나 접근 가능");
+
+        [Authorize]
+        [Route("/Greeting")]
+        public IActionResult Greeting()
+        {
+            var roleName = HttpContext.User.IsInRole("Administrators") ? "관리자" : "사용자";
+            return Content($"<em>{ roleName}</em> 님, 반갑습니다.", "text/html", Encoding.Default);
+        }
+    }
+    #endregion
+
+
+    [Authorize(Roles = "Administrators")]
+    public class DashboardController : Controller
+    {
+        public IActionResult Index() => Content("관리자 님, 반갑습니다. 접근 가능");
+    }
+    #endregion
+
+
+    #region Web ApiController
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AuthServiceController : ControllerBase
+    {
+        [Authorize]
+        [HttpGet]
+        public IEnumerable<ClaimDto> Get() =>
+          HttpContext.User.Claims.Select(c => new ClaimDto { Type = c.Type, Value = c.Value });
+    } 
+    #endregion
+
+
 }
